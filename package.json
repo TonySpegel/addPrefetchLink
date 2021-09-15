@@ -1,9 +1,27 @@
 {
     "name": "add-prefetch-link",
-    "version": "1.0.0",
-    "description": "Add prefetch links to your <head> to spead up page navigation",
-    "main": "index.js",
+    "version": "1.0.1",
+    "description": "Add prefetch links to your <head> to speed up page navigation",
+    "main": "./dist/index.js",
     "type": "module",
     "author": "Tony Spegel",
-    "license": "MIT"
+    "license": "MIT",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TonySpegel/addPrefetchLink"
+    },
+    "homepage": "https://github.com/TonySpegel/addPrefetchLink#readme",
+    "keywords": [
+        "prefetch",
+        "perf"
+    ],
+    "devDependencies": {
+        "typescript": "^4.4.3"
+    }
 }
