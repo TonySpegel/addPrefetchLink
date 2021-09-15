@@ -1,0 +1,9 @@
+{
+    "name": "add-prefetch-link",
+    "version": "1.0.0",
+    "description": "Add prefetch links to your <head> to spead up page navigation",
+    "main": "index.js",
+    "type": "module",
+    "author": "Tony Spegel",
+    "license": "MIT"
+}
