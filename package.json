@@ -1,6 +1,6 @@
 {
     "name": "add-prefetch-link",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Add prefetch links to your <head> to speed up page navigation",
     "main": "./dist/index.js",
     "type": "module",
