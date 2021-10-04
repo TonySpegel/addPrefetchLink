@@ -1,31 +1,31 @@
 # addPrefetchLink
-Adds links with `rel="prefetch"` to your `<head>`-element to speed up page navigation.
-It is loosley inspired by [quicklink](https://getquick.link/) but works differently (their [approach](https://getquick.link/approach/)) by using user interactions.
+Adds links with `rel="prefetch"` on user interaction
+to speed up page navigation. Loosley inspired by [quicklink](https://getquick.link/).
 
 ## How it works
-**addPrefetchLink** registers a set of events per link (these are by default `mouseover` and `focus`). These will add a prefetch-link to your `<head>`-element. To avoid unnecessary network requests only one of the events per link will be executed. 
+**addPrefetchLink** registers a set of EventListeners per link (by default: `mouseover` and `focus`) which will then add a prefetch-link to your `<head>`-element. To avoid unnecessary network requests only one of the events per link will be execute that process. 
+
+Links won't be added on slow connections or under data saver settings.
+
+[Codepen Demo](https://codepen.io/TonySpegel/full/PojrqZb)
 
 ## Usage
 ```bash
 # Installation:
-npm i add-prefetch-link --save-dev
+npm i add-prefetch-link
 ```
 ```javascript
 // Import library
 import { addPrefetchLink } from 'add-prefetch-link';
 
 // Select links
-const links = document.querySelectorAll('a');
+const links = document.querySelectorAll('a:not([href^="mailto:"]):not([href^="tel:"])');
 
-// Add event to prefetch links
-links.forEach((link) => {
-    addPrefetchLink(link);
-});
+// Call addPrefetchLink on every link
+links.forEach((link) => addPrefetchLink(link));
 
-// Alternative to define events
-links.forEach((link) => {
-    addPrefetchLink(link, ['mouseover', 'focus']);
-});
+// Use your own set of events
+links.forEach((link) => addPrefetchLink(link, ['focus']));
 ```
 
 ## Limitations
