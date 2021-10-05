@@ -3,7 +3,7 @@ Adds links with `rel="prefetch"` on user interaction
 to speed up page navigation. Loosley inspired by [quicklink](https://getquick.link/).
 
 ## How it works
-**addPrefetchLink** registers a set of EventListeners per link (by default: `mouseover` and `focus`) which will then add a prefetch-link to your `<head>`-element. To avoid unnecessary network requests only one of the events per link will be execute that process. 
+**addPrefetchLink** registers a set of EventListeners per link (by default: `mouseover` and `focus`) which will then add a prefetch-link to your `<head>`-element. To avoid unnecessary network requests only one of the events per link will execute that process. 
 
 Links won't be added on slow connections or under data saver settings.
 
